@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    </body background="01PW.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
@@ -41,6 +39,17 @@
             padding: 20px;
         }
 
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 kolom dengan lebar yang sama */
+            gap: 20px; /* Jarak antar gambar */
+        }
+
+        .gallery img {
+            width: 100%; /* Gambar mengisi lebar kontainer */
+            height: auto; /* Tinggi disesuaikan agar proporsi gambar tetap */
+        }
+
         footer {
             background-color: #feb5e2;
             color: #ffffffea;
@@ -50,31 +59,64 @@
             width: 100%;
             bottom: 0;
         }
+
+        
+.buttonClass {
+  font-size:15px;
+  font-family:Arial;
+  width:140px;
+  height:50px;
+  border-width:1px;
+  color:#ffffff;
+  border-color:#ee1eb5;
+  font-weight:bold;
+  border-top-left-radius:6px;
+  border-top-right-radius:6px;
+  border-bottom-left-radius:6px;
+  border-bottom-right-radius:6px;
+  box-shadow:inset 0px 1px 0px 0px #fbafe3;
+  text-shadow:inset 0px 1px 0px #c70067;
+  background:linear-gradient(#ff5bb0, #ef027d);
+}
+
+.buttonClass:hover {
+  background: linear-gradient(#ef027d, #ff5bb0);
+}
+              
     </style>
 </head>
-
 <body>
 
-    <header>
-        <h1>Gallery</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="contac.html">Contact</a>
-    </nav>
-    <nav>
-        <section id="gallery">
-       <body>
-        <div class="gallery">
-            <img src="01PW.jpeg" alt="Foto 1">
-            <img src="02PW.jpeg" alt="Foto 2">
-            <img src="03PW.jpeg" alt="Foto 3">
-            <img src="04PW.jpeg" alt="Foto 4">
-       </body>
-    </section>
+<header>
+    <h1>Gallery</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
 </nav>
+
+<section id="gallery">
+    <div class="gallery" id="galleryContainer">
+       
+    
+        <!-- Tambahkan gambar-gambar lainnya di sini -->
+    </div>
+    <div style="padding-top: 20px; padding-left: 35%; padding-right: 35%;">
+        <a href="#gallery" class="buttonClass" onclick="loadGallery()" id="loadGalleryButton" style="padding: 10px; text-align: center;">Tekan Untuk Melihat Gallery</a>
+        <a href="#gallery" class="buttonClass" onclick="previousGallery()" id="previousGalleryButton" style="display: none; text-align: center;">Sebelumnya</a>
+        <a href="#gallery" class="buttonClass" onclick="nextGallery()" id="nextGalleryButton" style="display: none; text-align: center;">next</a>
+   
+    </div>
+   
+</section> 
+
 <footer>
     <p>&copy; 2024 My Blog as Elsa Lokas</p>
 </footer>
+<script src="script.js"></script>
+
+</body>
+</html>
